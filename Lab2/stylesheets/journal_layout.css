@@ -1,0 +1,64 @@
+/* 学号：13331235
+姓名：谭潇
+内容：Lab2
+ps:前几项练习的部分内容在备注里
+*/
+
+.body {
+    /*border: 5px green solid;*/
+    
+    border: 10px white solid;
+    background-color: #FFFFFF;
+}
+.head {
+    /*border: 5px red solid;*/
+    
+    text-align: right;
+    background-color: #A8F0F0;
+}
+.friend {
+    border: 4px #009097 solid;
+    background-color: #99E0E0;
+    float: left;
+    padding: 5px;
+    margin: 10px 10px 150px 5px;
+    word-wrap: break-word;
+    width: 11%;
+    min-width: 65px;
+}
+.content {
+    /*border: 5px blue solid;*/
+    
+    border: 4px #C2E9E9 solid;
+    padding: 5px;
+    background-color: #E8FBFB;
+    margin-top: 10px;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: auto;
+}
+.content img {
+    float: right;
+}
+span {
+    /*border: 5px purple solid;*/
+    
+    border-bottom: 2px blue dashed;
+}
+h1+h2 {
+    /*border: 5px orange solid;*/
+    
+    font-size: 14pt;
+}
+body {
+    background-image: url(../images/background.gif);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 350px;
+}
+/*exercise 6*/
+
+div * *:hover {
+    background-color: yellow;
+}

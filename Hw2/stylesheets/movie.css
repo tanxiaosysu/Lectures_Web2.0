@@ -1,0 +1,121 @@
+/*
+学号 13331235
+姓名 谭潇
+课程 Web2.0-homework2
+作业简介 重构所给网页
+文件内容 样式表
+ */
+
+body {
+    background-image: url(../images/background.png);
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 8pt;
+}
+/*banner*/
+
+#banner {
+    background-image: url(../images/bannerbackground.png);
+    background-repeat: repeat-x;
+    height: 50px;
+}
+/*headline*/
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24pt;
+}
+/*body*/
+
+h1+div {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid gray;
+}
+/*left bar*/
+
+.leftbar {
+    width: 550px;
+}
+/*left bar's first image*/
+
+.leftbar > div:first-child {
+    background-image: url(../images/rottenbackground.png);
+    background-repeat: repeat-x;
+    height: 83px;
+    color: white;
+}
+.leftbar > div:first-child > span {
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+.leftbar > div:first-child > img {
+    vertical-align: -10px;
+}
+/*left bar's frame*/
+
+.comment {
+    width: 47%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.left {
+    float: left;
+    margin-right: 0%;
+}
+.right {
+    float: right;
+}
+/*comment's frame*/
+
+.comment > div > p:first-of-type {
+    border: 2px solid gray;
+    background-color: #E1D697;
+    overflow: hidden;
+    padding: 8px;
+    font-weight: bold;
+}
+.comment > div > p:nth-of-type(2) {
+    overflow: hidden;
+    font-style: italic;
+    margin-bottom: 3em;
+}
+.comment > div > p:nth-of-type(2):first-line {
+    font-style: normal;
+}
+.comment > div > p >img {
+    margin-right: 5px;
+    float: left;
+}
+/*right bar*/
+
+.rightbar {
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.rightbar > dl {
+    padding: 10px;
+}
+.rightbar > dl > dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+/*paragraph: (1-8) of 88*/
+
+body > div > p {
+    background-color: #A2B964;
+    margin: 0px;
+    padding: 5px;
+    clear: both;
+}
+/*w3c validate images*/
+
+.w3c {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}

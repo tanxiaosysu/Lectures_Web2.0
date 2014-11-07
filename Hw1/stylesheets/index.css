@@ -1,0 +1,37 @@
+/* 学号-姓名：13331235-谭潇
+分类：homework1
+内容：index样式 */
+
+body {
+    font-size: 13.5pt;
+    font-family: 'Trebuchet MS', Arial, serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+h2 {
+    color: rgb(240, 120, 0);
+    font-family: 'Courier New', Times, sans-serif;
+    font-size: 20pt;
+}
+.title {
+    color: #A4A400;
+    background-color: #E0E0E0;
+    font-size: 24pt;
+    text-align: center;
+}
+p {
+    text-indent: 2em;
+}
+span {
+    font-weight: bold;
+}
+li {
+    font-size: 12.5pt;
+}
+a:link {
+    text-decoration: none;
+}
+.pie:link {
+    text-decoration: underline;
+}

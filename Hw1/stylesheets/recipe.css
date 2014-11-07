@@ -1,0 +1,43 @@
+/* 学号-姓名：13331235-谭潇
+分类：homework1
+内容：pie样式(含额外功能1~4) */
+
+body {
+    max-width: 1024px;
+    background-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/silverware.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, Serif;
+}
+h2 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: 'Century Gothic', Futura, Verdana;
+    font-size: 18pt;
+    text-decoration: underline;
+    font-weight: normal;
+    word-spacing: 0.2em;
+}
+.head {
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+}
+ul li {
+    list-style-image: url(http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/pie_icon.gif);
+}
+span {
+    font-weight: bold;
+}
+.comments {
+    background-color: #FFFFC8;
+    font-style: italic;
+}
+a {
+    color: #A4A400;
+}
+a+img {
+    border-style: none;
+}

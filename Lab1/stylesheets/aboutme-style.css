@@ -1,0 +1,58 @@
+body {
+    color: rgb(225, 225, 225);
+    background: rgb(89, 85, 71);
+    font-family: 'Trebuchet MS', Arial, serif;
+    font-size: 19px;
+}
+h1 {
+    font-size: 23px;
+}
+h2 {
+    font-size: 21px;
+}
+p {
+    font-family: 'Courier New', Times, sans-serif;
+    text-indent: 2em;
+}
+p b {
+    color: yellow;
+    font-size: 20px;
+    font-style: italic;
+}
+p b i {
+    color: rgb(128, 255, 255);
+    font-size: 19.5px;
+}
+p:first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+li {
+    n list-style-position: inside;
+}
+a {
+    color: rgb(125, 125, 255);
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+dt {
+    font-size: 18px;
+}
+dl {
+    font-size: 16px;
+}
+ol {
+    list-style: none;
+    counter-reset: number 5;
+}
+ol > li:before {
+    content: counter(number)'.';
+}
+ol > li {
+    counter-increment: number -1;
+}
