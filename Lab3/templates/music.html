@@ -1,0 +1,48 @@
+<!--
+student number:13331235
+name: TanXiao
+head: Web2.0-Lab3
+content: exercise1 ~ exercise5
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Music Viewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://www.cs.washington.edu/education/courses/cse190m/09sp/labs/3-music/viewer.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 页面顶部的返回超链接 -->
+    {% if returnlink == True %}
+        <a href="/">Return to index</a>
+    {% end %}
+    <br />
+
+    <div id="header">
+        <h1>190M Music Playlist Viewer</h1>
+        <h2>Search Through Your Playlists and Music</h2>
+    </div>
+
+    <div id="listarea">
+        <ul id="musiclist">
+            {% for x in range(0,len(songslist)) %}
+            <li class="mp3item">
+                <a href="{{static_url("songs")}}/{{songslist[x][0]}}">{{ songslist[x][0] }}</a>
+                ({{ songslist[x][1] }}{{ songslist[x][2] }})
+            </li>
+            {% end %}
+            {% if playlistlist != None %}
+                {% for playlistname in playlistlist %}
+                <li class="playlistitem">
+                    <a href="?listname={{ playlistname }}">{{ playlistname }}</a>
+                </li>
+                {% end %}
+            {% end %}
+        </ul>
+    </div>
+</body>
+
+</html>
