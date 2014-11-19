@@ -1,12 +1,12 @@
 body {
-    background-image: url(../images/background.png);
+    background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/background.png);
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 8pt;
 }
 /*banner*/
 
 #banner {
-    background-image: url(../images/bannerbackground.png);
+    background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png);
     background-repeat: repeat-x;
     height: 50px;
 }
@@ -35,7 +35,7 @@ h1+div {
 /*left bar's first image*/
 
 .leftbar > div:first-child {
-    background-image: url(../images/rottenbackground.png);
+    background-image: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png);
     background-repeat: repeat-x;
     height: 83px;
     color: white;
@@ -70,7 +70,7 @@ h1+div {
 .comment > div > p:first-of-type {
     border: 2px solid gray;
     background-color: #E1D697;
-    /*overflow: hidden;*/
+    overflow: hidden;
     padding: 8px;
     font-weight: bold;
 }

@@ -86,10 +86,15 @@ class MainHandler(tornado.web.RequestHandler):
             # 读取review文件
             Review = get_comments(path)
             movieitem = movie(Info, Dt, Dd, Review)
+            if movieitem.info[2][0] < '6':
+                movieimg = 'rotten'
+            else:
+                movieimg = 'fresh'
             self.render(
                 'skeleton.html',
                 movielist=None,
                 movieitem=movieitem,
+                movieimg=movieimg,
                 main=False
             )
         else:

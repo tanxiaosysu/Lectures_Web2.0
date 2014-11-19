@@ -21,7 +21,7 @@
 
 <body>
     <div id="banner">
-        <img src="{{ static_url("images") }}/banner.png" alt="Rancid Tomatoes">
+        <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/banner.png" alt="Rancid Tomatoes">
     </div>
 
     {% if main == True %}
@@ -53,7 +53,11 @@
         </div>
         <div class="leftbar">
             <div>
-                <img src="{{ static_url("images") }}/rottenbig.png" alt="Rotten">
+                {% if movieimg == 'rotten' %}
+                <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/{{ movieimg }}big.png" alt="{{ movieimg }}">
+                {% else %}
+                <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045943/{{ movieimg }}big.png" alt="{{ movieimg }}">
+                {% end %}
                 <span>{{ movieitem.info[2] }}%</span>({{ movieitem.info[3] }} reviews total)
             </div>
             {% for x in range(0, len(movieitem.comments)) %}
@@ -61,11 +65,11 @@
             <div class="left comment">
                 <div>
                     <p>
-                        <img src="{{ static_url("images") }}/{{ movieitem.comments[x][1] }}.gif" alt="Rotten">
+                        <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/{{ movieitem.comments[x][1] }}.gif" alt="{{ movieitem.comments[x][1] }}">
                         <q>{{ movieitem.comments[x][0] }}</q>
                     </p>
                     <p>
-                        <img src="{{ static_url("images") }}/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
+                        <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
                         <br />{{ movieitem.comments[x][3] }}
                     </p>
                 </div>
@@ -74,11 +78,11 @@
             <div class="right comment">
                 <div>
                     <p>
-                        <img src="{{ static_url("images") }}/{{ movieitem.comments[x][1] }}.gif" alt="Rotten">
+                        <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/{{ movieitem.comments[x][1] }}.gif" alt="Rotten">
                         <q>{{ movieitem.comments[x][0] }}</q>
                     </p>
                     <p>
-                        <img src="{{ static_url("images") }}/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
+                        <img src="http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
                         <br />{{ movieitem.comments[x][3] }}
                     </p>
                 </div>
