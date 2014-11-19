@@ -1,0 +1,107 @@
+<!--
+学号 13331235
+姓名 谭潇
+课程 Web2.0-homework3
+文件内容 网页
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% if main == True %}
+    <title>Movie List</title>
+    {% else%}
+    <title>{{ movieitem.info[0] }}</title>
+    {% end %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="{{static_url("stylesheets")}}/movie.css" type="text/css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/gif" href="{{ static_url("images") }}/rotten.gif">
+</head>
+
+<body>
+    <div id="banner">
+        <img src="{{ static_url("images") }}/banner.png" alt="Rancid Tomatoes">
+    </div>
+
+    {% if main == True %}
+        <h1>The List Of Movies</h1>
+        <div class="main">
+            <ul>
+                {% for movie in movielist %}
+                <li>
+                    <a href="?moviename={{ movie }}">{{ movie }}</a>
+                </li>
+                {% end %}
+            </ul>
+        </div>
+    {% else %}
+    <h1>{{ movieitem.info[0] }} ({{ movieitem.info[1] }})</h1>
+
+    <div>
+        <div class="rightbar">
+            <div>
+                <img src="{{ static_url("".join(movieitem.info[0].split(' ')).lower()) }}/generaloverview.png" alt="general overview">
+            </div>
+
+            <dl>
+                {% for x in range(0,len(movieitem.dt)) %}
+                <dt>{{ movieitem.dt[x] }}</dt>
+                <dd>{{ movieitem.dd[x] }}</dd>
+                {% end %}
+            </dl>
+        </div>
+        <div class="leftbar">
+            <div>
+                <img src="{{ static_url("images") }}/rottenbig.png" alt="Rotten">
+                <span>{{ movieitem.info[2] }}%</span>({{ movieitem.info[3] }} reviews total)
+            </div>
+            {% for x in range(0, len(movieitem.comments)) %}
+                {% if x % 2 == 0 %}
+            <div class="left comment">
+                <div>
+                    <p>
+                        <img src="{{ static_url("images") }}/{{ movieitem.comments[x][1] }}.gif" alt="Rotten">
+                        <q>{{ movieitem.comments[x][0] }}</q>
+                    </p>
+                    <p>
+                        <img src="{{ static_url("images") }}/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
+                        <br />{{ movieitem.comments[x][3] }}
+                    </p>
+                </div>
+            </div>
+                {% else %}
+            <div class="right comment">
+                <div>
+                    <p>
+                        <img src="{{ static_url("images") }}/{{ movieitem.comments[x][1] }}.gif" alt="Rotten">
+                        <q>{{ movieitem.comments[x][0] }}</q>
+                    </p>
+                    <p>
+                        <img src="{{ static_url("images") }}/critic.gif" alt="Critic">{{ movieitem.comments[x][2] }}
+                        <br />{{ movieitem.comments[x][3] }}
+                    </p>
+                </div>
+            </div>
+                {% end %}
+            {% end %}
+        </div>
+        <p>(1-{{ len(movieitem.comments) }}) of {{ movieitem.info[3] }}</p>
+    </div>
+    {% end %}
+    <div class="return w3c">
+        <a href="?back=back">
+            <img src="{{ static_url("images") }}/back.png" alt="Back" width="120" height="40">
+        </a>
+        <br />
+        <a href="http://validator.w3.org/check/referer">
+            <img src="http://www.w3.org/Icons/valid-html401" alt="ERROR" width="120" height="30">
+        </a>
+        <br />
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="ERROR" width="120" height="30">
+        </a>
+    </div>
+</body>
+
+</html>
