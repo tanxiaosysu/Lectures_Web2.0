@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Buy Your Way to a Better Education!</title>
+    <link href="{{ static_url("stylesheets") }}/buyagrade.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        {% if completed == False %}
+        <h1>Sorry</h1>
+
+        <p>You didn't fill out the form completely. <a href="?back=True">Try again?</a>
+        </p>
+        {% elif rightcard == False %}
+        <h1>Sorry</h1>
+
+        <p>You didn't provide a valid card number. <a href="?back=True">Try again?</a>
+        </p>
+        {% else %}
+        <h1>Thanks, sucker!</h1>
+
+        <p>Your information has been recorded.</p>
+
+        <dl>
+            <dt>Name</dt>
+            <dd>{{ user.name }}</dd>
+
+            <dt>Section</dt>
+            <dd>{{ user.section }}</dd>
+
+            <dt>Credit Card</dt>
+            <dd>{{ user.cardnumber }}({{ user.cardtype }})</dd>
+        </dl>
+
+        <p>Here are all the suckers who have submitted here:</p>
+
+        <pre>
+        {% for everyuser in userlist %}
+        {{ everyuser.name }};{{ everyuser.section }};{{ everyuser.cardnumber }};{{ everyuser.cardtype }} {% end %}
+        </pre>
+        {% end %}
+
+    </div>
+</body>
+
+</html>
