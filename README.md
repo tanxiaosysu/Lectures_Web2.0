@@ -2,8 +2,8 @@ Web2.0  -  TanX
 ===============
 &emsp;——Web与Git的学习之路
 ------------------------------------------
+链接: [Lectures_Web2.0 - Home Page](http://tanxiaosysu.github.io/Lectures_Web2.0/)
 
-------------------------------------------
 ### 更新公告 (创建于2014-11-08)
 <b>2014-12-21</b><br />
 * 制(xiu)作(gai)了web2.0部分的HomePage
